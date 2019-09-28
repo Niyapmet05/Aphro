@@ -5,7 +5,9 @@
   "main": "app",
   "scripts": {
     "dev": "nodemon --exec babel-node app.js",
-    "test": "mocha --require @babel/register test/test.js"
+    "test": "mocha --require @babel/register test/test.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --require  @babel/register test/test.js",
+    "testa":" nyc mocha --require @babel/register test/test.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,8 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/register": "^7.6.2",
     "chai": "^4.2.0",
-    "chai-http": "^4.3.0"
+    "chai-http": "^4.3.0",
+    "istanbul": "^0.4.5",
+    "nyc": "^14.1.1"
   }
 }
