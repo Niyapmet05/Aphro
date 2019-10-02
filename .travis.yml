@@ -1,9 +1,10 @@
-env:
-  global:
-    - CC_TEST_REPORTER_ID=28cf2ec7cd2a529818feebdc466d27305f71c3e6a56b03bc22f37ed4b7e40716
 language: node_js
 node_js:
  - "node"
+ env:
+  global:
+    - CC_TEST_REPORTER_ID=28cf2ec7cd2a529818feebdc466d27305f71c3e6a56b03bc22f37ed4b7e40716
+
 addons:
   code_climate:
     repo_token: 28cf2ec7cd2a529818feebdc466d27305f71c3e6a56b03bc22f37ed4b7e40716
@@ -13,6 +14,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - npm run test
+  - npm run testb
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
